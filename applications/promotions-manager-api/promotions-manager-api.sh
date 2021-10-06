@@ -6,6 +6,7 @@ printenv > /var/log/colony-vars-"$(basename "$BASH_SOURCE" .sh)".txt
 
 echo '==> Installing Node.js and NPM'
 apt-get update -y
+apt-get upgrade -y
 apt install curl -y
 curl -sL https://deb.nodesource.com/setup_10.x | bash -
 apt install nodejs -y
